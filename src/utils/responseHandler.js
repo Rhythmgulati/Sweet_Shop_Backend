@@ -1,4 +1,7 @@
+// responsehandler 
 class responseHandler {
+
+    // success response
     static success(res, data, message = "Success", statusCode = 200) {
         return res.status(statusCode).json({
             status: "success",
@@ -6,6 +9,8 @@ class responseHandler {
             data
         });
     };
+
+    // error response
     static error(res, message = "Error", statusCode = 500, errors = []) {
         return res.status(statusCode).json({
             status: "error",          
