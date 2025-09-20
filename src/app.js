@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import { middlewareLoader } from "./loaders/middlewareLoader";
-import { routesLoader } from "./loaders/routesLoader";
+import { middlewareLoader } from "./loaders/middlewareLoader.js";
+import { routesLoader } from "./loaders/routesLoader.js";
 dotenv.config();
 
 

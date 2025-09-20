@@ -1,38 +1,27 @@
-// Update with your config settings.
-
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-module.exports = {
-
+const knexfile = {
   development: {
-    client: 'postgresql',
+    client: 'pg',   
     connection: {
-      filename: './dev.sqlite3'
-    }
-  },
-
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
+      host: '127.0.0.1',    
+      port: 5432,          
+      database: 'SweetShopData', 
+      user: 'postgres',      
+      password: 'tiger' 
     },
     migrations: {
       tableName: 'knex_migrations'
     }
   },
-
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
+      host: '127.0.0.1',   
+      port: 5432,
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {
@@ -43,5 +32,6 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-
 };
+
+export default knexfile;

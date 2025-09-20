@@ -1,5 +1,5 @@
 // responsehandler 
-class responseHandler {
+export default class ApiResponse {
 
     // success response
     static success(res, data, message = "Success", statusCode = 200) {
@@ -19,4 +19,3 @@ class responseHandler {
         });
     };
 };
-
